@@ -56,3 +56,17 @@ fun llegirLong():Long {
     }while (error)
     return num
 }
+
+fun llegirString():String {
+    var scanner=Scanner(System.`in`)
+    var letra:String = scanner.nextLine()
+    var error = true
+    do {if (scanner.hasNextLine()){
+        letra=scanner.nextLine()
+        error=false
+    }else {
+        scanner.nextLine()
+    }
+    }while (error)
+    return letra
+}
