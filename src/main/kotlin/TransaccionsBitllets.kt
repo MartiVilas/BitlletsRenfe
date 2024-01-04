@@ -16,3 +16,4 @@ fun calcularPrecio(precioBase: Double, zona: Int, cantidad: Int): Double {
         else -> 1.0 // Zona 1 no tiene incremento
     }
     return precioBase * factorZona * cantidad
+}
