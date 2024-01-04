@@ -9,3 +9,10 @@ fun getNombreBillete(tipoBillete: Int): String {
         else -> "TJove"
     }
 }
+fun calcularPrecio(precioBase: Double, zona: Int, cantidad: Int): Double {
+    val factorZona = when (zona) {
+        2 -> 1.3125
+        3 -> 1.8443
+        else -> 1.0 // Zona 1 no tiene incremento
+    }
+    return precioBase * factorZona * cantidad

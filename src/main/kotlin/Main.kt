@@ -46,11 +46,3 @@ fun main() {
         seguirComprando = llegirWord("Introdueixi 'S' per continuar o 'N' per acabar: ", "ERROR: Cal introduir 'S' o 'N'")
     } while (seguirComprando.equals("S", ignoreCase = true))
 }
-fun calcularPrecio(precioBase: Double, zona: Int, cantidad: Int): Double {
-    val factorZona = when (zona) {
-        2 -> 1.3125
-        3 -> 1.8443
-        else -> 1.0 // Zona 1 no tiene incremento
-    }
-    return precioBase * factorZona * cantidad
-}
